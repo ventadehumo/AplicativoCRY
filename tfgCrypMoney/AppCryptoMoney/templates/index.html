@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0 ,maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8"><meta name="description" content="Tecnologia web">
+	<title>El primer web en HTML5 i CSS3</title>
+	<link href="elMeuEstil.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="fonts.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.highcharts.com/highcharts.src.js"></script>
+
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<header id="cap">
+			<p><H1><font color="white"> Seguimiento de tus inversiones </font></H1></p>
+
+
+
+
+		</header>
+
+		<!-- inici del menú horitzontal -->
+		<nav id="navegacio">
+			 <ul id="menu-bar">
+
+			 <li><a href="index.html"><span class="icon-menu"></span>Inicio</a></li>
+			<li><a href="quisom.html"><span class="icon-info"></span>Qui som ?</a></li>
+				<li><a href="contacte.html"><span class="icon-phone"></span></span>Contacte</a></li>
+				<li><a href="http://latendasurmesure.byethost5.com/"><span class="icon-cart"></span>Tenda Virtual</a></li>
+
+
+
+
+
+</ul>
+
+
+		</nav>
+		<!-- fi del menú horitzontal -->
+
+
+		<!-- inici de la secció principal -->
+      <section class="contingut">
+
+					<div id="container1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+
+
+				<script type="text/javascript">
+
+Highcharts.chart('container1', {
+    chart: {
+        type: 'area'
+    },
+    title: {
+        text: 'Posicion Global'
+    },
+    subtitle: {
+        text: 'Source: Wikipedia.org'
+    },
+    xAxis: {
+        categories: ['1750', '1800', '1850', '1900', '1950', '1999', '2050'],
+        tickmarkPlacement: 'on',
+        title: {
+            enabled: false
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'Billions'
+        },
+        labels: {
+            formatter: function () {
+                return this.value / 1000;
+            }
+        }
+    },
+    tooltip: {
+        split: true,
+        valueSuffix: ' millions'
+    },
+    plotOptions: {
+        area: {
+            stacking: 'normal',
+            lineColor: '#666666',
+            lineWidth: 1,
+            marker: {
+                lineWidth: 1,
+                lineColor: '#666666'
+            }
+        }
+    },
+    series: [{
+        name: 'BITCOIN',
+        data: [502, 635, 809, 947, 1402, 3634, 5268]
+    }, {
+        name: 'ETHERUM',
+        data: [106, 107, 111, 133, 221, 767, 1766]
+    }, {
+        name: 'ROGERCOIN',
+        data: [163, 203, 276, 408, 547, 729, 628]
+    }, {
+        name: 'America',
+        data: [18, 31, 54, 156, 339, 818, 1201]
+    }, {
+        name: 'Oceania',
+        data: [2, 2, 2, 6, 13, 30, 46]
+    }]
+});
+		</script>
+
+
+				</section>
+
+
+	<br>
+		<br>
+		<br>
+
+
+
+		<br>
+		<br>
+
+
+
+
+	<section>
+
+
+	<div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"> </div>
+
+	<script type="text/javascript">
+Highcharts.chart('container2', {
+    chart: {
+        type: 'pie',
+        options3d: {
+            enabled: true,
+            alpha: 45
+        }
+    },
+    title: {
+        text: 'Posicion Global'
+    },
+    subtitle: {
+        text: '3D donut in Highcharts'
+    },
+    plotOptions: {
+        pie: {
+            innerSize: 100,
+            depth: 45
+        }
+    },
+    series: [{
+        name: 'Delivered amount',
+        data: [
+            ['Bitcoins', 8],
+            ['ETHERUM', 3],
+            ['Mixed nuts', 1],
+            ['Oranges', 6],
+
+        ]
+    }]
+});
+
+
+		</script>
+
+		</section>
+	<br><br>
+
+	<section>
+
+<table class= productos>
+<tr>
+
+    <th>Producto</th>
+
+    <th>Numero de titulos </th>
+
+    <th>Fecha de compra</th>
+
+    <th>Valor Fecha de compra</th>
+
+	<th>Valor actual </th>
+
+
+  </tr>
+
+  <tr>
+
+    <td>BITCOIN</td>
+
+    <td>1</td>
+
+    <td>Parcialmente nublado</td>
+
+  </tr>
+
+  <tr>
+
+    <td>19°C</td>
+
+    <td>17°C</td>
+
+    <td>12°C</td>
+
+  </tr>
+
+  <tr>
+
+    <td>E 13 km/h</td>
+
+    <td>E 11 km/h</td>
+
+    <td>S 16 km/h</td>
+
+  </tr>
+
+</table>
+
+
+
+
+			</section>
+
+
+		<!-- fi de la secció-->
+
+<aside>
+<div class="blocs-aside">
+
+		<ul class="categoria">
+		<h1>Articles recents</h1>
+			<li><a href = "Asia ja es aqui.html">Asia ja es aqui!!!</a></li>
+			<li><a href = "post2.html"> Tendecies Primavera</a></li>
+			<li><a href = "post3.html"> Fira diseny Barcelona 2018!!</a></li>
+
+			<br>
+			<br>
+			<iframe width="350" height="300" src="https://www.youtube.com/embed/UAuumtEHdtY" frameborder="0" allowfullscreen></iframe>
+			<br>
+			<br>
+			<h2> Segueixnos a les reds socials</h2>
+
+			<div class="xarxess">
+
+			<a title="facebook" width="500" height="250" href="https://www.facebook.com/Sur-Mesure-743898325812747/"><img src="flo.png" alt="Facebook" /></a>
+			<a title="Instagram" href="https://www.instagram.com/tendenciassurmesure/"><img src="lin.png" width="100" height="100" /></a>
+
+
+
+		</ul>
+		</div>
+
+			</aside>
+
+
+
+
+		<!-- Fi de l' aside-->
+
+
+		<!-- Inici del peu de pàgina-->
+
+
+
+	<footer>
+
+<p> Sur Mesure   </p>
+
+
+	</footer>
+
+	</div>
+
+</body>
+</html>

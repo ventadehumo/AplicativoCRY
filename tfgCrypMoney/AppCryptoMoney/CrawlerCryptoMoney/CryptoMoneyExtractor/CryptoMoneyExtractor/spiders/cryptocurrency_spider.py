@@ -2,6 +2,7 @@ import scrapy
 from scrapy.http import FormRequest
 from scrapy.selector import HtmlXPathSelector
 from scrapy.http import Request
+from scrapy.crawler import CrawlerProcess
 import urllib
 from scrapy.shell import inspect_response
 from scrapy.xlib.pydispatch import dispatcher
@@ -47,7 +48,7 @@ class CRYPTOCURRENCY_Spider(enginemodule.Engine_Module):
         self.meta = None
         #self.meta = {'proxy': 'http://127.0.0.1:8081'}
 
-        self.crypto_moneys = None
+        #self.crypto_moneys = None
 
         self.WriteXML_Controller = True
 
@@ -71,6 +72,8 @@ class CRYPTOCURRENCY_Spider(enginemodule.Engine_Module):
         try:
             self.logger.debug("Init globalposition")
 
+            global cripto_List
+
             # Inicializacion Item
             item = CriptoMoney_Item()
             list_item = List_CryptMoney()
@@ -85,17 +88,9 @@ class CRYPTOCURRENCY_Spider(enginemodule.Engine_Module):
             # Fecha de scrapero
 
             # Extraccion depsicion global de monedas
-            self.crypto_moneys = json.loads(response.body)
-            criptomone_List = []
-
-
-            for crpM in self.crypto_moneys:
-                criptomone_List.append(crpM)
-
-            list_item = criptomone_List
+            cripto_List = json.loads(response.body)
 
             self.logger.debug("End globalposition")
-            return list_item
 
         except Exception, e:
             self.logger.error("Error in globalposition : ")
@@ -120,7 +115,7 @@ class CRYPTOCURRENCY_Spider(enginemodule.Engine_Module):
     def spider_closed(self):
         try:
             self.logger.debug("Init spider_closed")
-            self.logger.debug("Writing Criptomoney ... ")
+            #self.logger.debug("Writing Criptomoney ... ")
 
             '''
             # Escrivimos las noticias a XML
@@ -128,7 +123,22 @@ class CRYPTOCURRENCY_Spider(enginemodule.Engine_Module):
                 self.WriteNewsToXML(self.News)
                 self.WriteXML_Controller = False
             '''
-            return self.crypto_moneys
         except Exception, e:
             self.logger.error("Error in spider_closed")
             self.logger.error(e)
+
+def init_CryptoSpider():
+    global cripto_List
+    cripto_List = []
+
+    process = CrawlerProcess({
+        'USER_AGENT': 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1'
+    })
+
+    process.crawl(CRYPTOCURRENCY_Spider)
+    process.start()
+    return cripto_List
+
+
+#money = init_CryptoSpider()
+#print money

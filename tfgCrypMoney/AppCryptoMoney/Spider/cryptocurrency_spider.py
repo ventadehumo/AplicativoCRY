@@ -1,15 +1,13 @@
-import scrapy
-from scrapy.http import FormRequest
-from scrapy.selector import HtmlXPathSelector
-from scrapy.http import Request
-from scrapy.crawler import CrawlerProcess
-import urllib
-from scrapy.shell import inspect_response
-from scrapy.xlib.pydispatch import dispatcher
-from scrapy import signals
-from scrapy.http import HtmlResponse
 import json
-import enginemodule
+
+import scrapy
+from scrapy import signals
+from scrapy.crawler import CrawlerProcess
+from scrapy.http import Request
+from scrapy.xlib.pydispatch import dispatcher
+
+import AplicativoCRY.tfgCrypMoney.AppCryptoMoney.Spider.enginemodule
+
 
 class CriptoMoney_Item(scrapy.Item):
     # define the fields for your item here like:
@@ -31,7 +29,7 @@ class CriptoMoney_Item(scrapy.Item):
 class List_CryptMoney(scrapy.Item):
     list = scrapy.Field()
 
-class CRYPTOCURRENCY_Spider(enginemodule.Engine_Module):
+class CRYPTOCURRENCY_Spider(AplicativoCRY.tfgCrypMoney.AppCryptoMoney.Spider.enginemodule.Engine_Module):
     name = 'cryptocurrency_spider'
 
     #########################################################
@@ -140,5 +138,5 @@ def init_CryptoSpider():
     return cripto_List
 
 
-#money = init_CryptoSpider()
-#print money
+money = init_CryptoSpider()
+print money

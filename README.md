@@ -1,3 +1,4 @@
 Aplicativo CryptoMoney
 
-API - https://coinmarketcap.com/
+WEB - https://coinmarketcap.com/
+API - https://api.coinmarketcap.com/v1/ticker/

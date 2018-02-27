@@ -1,12 +1,15 @@
 import json
 
 import scrapy
-from scrapy import signals
+#from scrapy import signals
 from scrapy.crawler import CrawlerProcess
 from scrapy.http import Request
-from scrapy.xlib.pydispatch import dispatcher
+#from scrapy.xlib.pydispatch import dispatcher
+from scrapy.crawler import CrawlerRunner
+from scrapy.utils.log import configure_logging
+from twisted.internet import reactor, defer
 
-import AplicativoCRY.tfgCrypMoney.AppCryptoMoney.Spider.enginemodule
+import enginemodule
 
 
 class CriptoMoney_Item(scrapy.Item):
@@ -29,7 +32,7 @@ class CriptoMoney_Item(scrapy.Item):
 class List_CryptMoney(scrapy.Item):
     list = scrapy.Field()
 
-class CRYPTOCURRENCY_Spider(AplicativoCRY.tfgCrypMoney.AppCryptoMoney.Spider.enginemodule.Engine_Module):
+class CRYPTOCURRENCY_Spider(enginemodule.Engine_Module):
     name = 'cryptocurrency_spider'
 
     #########################################################
@@ -50,7 +53,7 @@ class CRYPTOCURRENCY_Spider(AplicativoCRY.tfgCrypMoney.AppCryptoMoney.Spider.eng
 
         self.WriteXML_Controller = True
 
-        dispatcher.connect(self.spider_closed, signals.spider_closed)
+        #dispatcher.connect(self.spider_closed, signals.spider_closed)
 
     def start_requests(self):
         self.logger.debug("Init Start request")
@@ -125,18 +128,18 @@ class CRYPTOCURRENCY_Spider(AplicativoCRY.tfgCrypMoney.AppCryptoMoney.Spider.eng
             self.logger.error("Error in spider_closed")
             self.logger.error(e)
 
-def init_CryptoSpider():
+def init_twisted_CryptoSpider():
     global cripto_List
     cripto_List = []
 
-    process = CrawlerProcess({
-        'USER_AGENT': 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1'
-    })
+    configure_logging()
+    runner = CrawlerRunner()
 
-    process.crawl(CRYPTOCURRENCY_Spider)
-    process.start()
+    @defer.inlineCallbacks
+    def crawl():
+        yield runner.crawl(CRYPTOCURRENCY_Spider)
+        reactor.stop()
+
+    crawl()
+    reactor.run()
     return cripto_List
-
-
-money = init_CryptoSpider()
-print money

@@ -22,6 +22,7 @@ class Criptomoneda (models.Model):
     name = models.CharField(max_length=200)
     symbol = models.CharField(max_length=200)
     rank = models.CharField(max_length=200)
+    price_usd = models.CharField(max_length=200)
     _24h_volume_usd = models.CharField(max_length=200)
     market_cap_usd = models.CharField(max_length=200)
     available_supply = models.CharField(max_length=200)
@@ -29,7 +30,8 @@ class Criptomoneda (models.Model):
     max_supply = models.CharField(max_length=200)
     percent_change_1h = models.CharField(max_length=200)
     percent_change_24h = models.CharField(max_length=200)
+    percent_change_7d = models.CharField(max_length=200)
     last_updated = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.UserName
+        return self.name

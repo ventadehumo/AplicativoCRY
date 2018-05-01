@@ -8,37 +8,73 @@
 	<link rel="stylesheet" href="fonts.css">
 	<link rel="stylesheet" href="style.css">
 	<script src="https://code.highcharts.com/highcharts.src.js"></script>
-
+   
 
 </head>
 
 <body>
 
 	<div id="wrapper">
+	
+	
+	
+	
+	
+ 
+<header >
 
-		<header id="cap">
-			<p><H1><font color="white"> Seguimiento de tus inversiones </font></H1></p>
-		</header>
+
+					
+<Div>		
+
+
+
+	
+			 <nav class="guarilla">
+			 
+			 <ul >
+			
+			 <h1 id = "titulo" float: right  > Mis inversiones </h1>
+		
+			 			 
+			 <li><a href="Formulario de acceso/formulario estilo instagram.html"> <b>Registrate</b></a></li>
+			 <li><a href="Formulario de acceso/formulario estilo instagram.html"> <b>Monotorización en tiempo real </b></a></li>
+			 <li><a href="Formulario de acceso/formulario estilo instagram.html"> <b>Noticias </b></a></li>
+			<li><a href="quisom.html"><span class="icon-info"></span><b>Inicia Sesion </b></a></li>
+				<li><a href="contacte.html"><span class="icon-phone"></span></span><b>Ayuda </b> </a></li>
+				<li><a href="ht/p://latendasurmesure.byethost5.com/"><span class="icon-cart"></span><b> ES</b></a>
+			 <ul>
+			 <li><a href="http://latendasurmesure.byethost5.com/"><span class="icon-cart"></span><b> Ingles</b></a></li>
+			 	 </ul>
+			 
+			</ul>
+			</nav>
+			
+			</div>
+
+</header>
 
 		<!-- inici del menú horitzontal -->
-		<nav id="navegacio">
-			 <ul id="menu-bar">
-
-			 <li><a href="index.html"><span class="icon-menu"></span>Inicio</a></li>
-			<li><a href="quisom.html"><span class="icon-info"></span>Qui som ?</a></li>
-				<li><a href="contacte.html"><span class="icon-phone"></span></span>Contacte</a></li>
-				<li><a href="http://latendasurmesure.byethost5.com/"><span class="icon-cart"></span>Tenda Virtual</a></li>
-
-
-</ul>
-
-
-		</nav>
+		<
 		<!-- fi del menú horitzontal -->
 
 
 		<!-- inici de la secció principal -->
-      <section class="contingut">
+		<section>
+		
+		<br>
+			<br>
+			<br>
+		
+		
+  <h2>Gestiona tu cartera </h2> 
+  <section>
+    <h1>Introducción</h1>
+    <p>En esta sección, ampliaremos nuestro concepto del pato.
+  </section>
+		<br>
+		<br>
+      <section class="contingut">			
 
 					<div id="container1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
@@ -107,27 +143,66 @@ Highcharts.chart('container1', {
     }]
 });
 		</script>
-
-
+		
+		
 				</section>
 
-
+	
 	<br>
 		<br>
 		<br>
-
-
-
+		
+		
+		
 		<br>
 		<br>
+		
+			
 
-
-
-
+	
 	<section>
 
-
+	
 	<div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"> </div>
+<form action="prog.php" method="post" name="formu" id="formu" 
+      onsubmit="return comprobar()">
+   Tu nombre: <input type="text" name="nombre" value=""><br>
+   Tu edad:   <input type="text" name="edad" value="" size="2" maxlength="2"><br>
+              <input type="submit" value="   Enviar   ">
+              
+              
+              
+              
+              
+              
+              
+              
+</form>
+
+<script language="javascript">
+function comprobar()
+{
+   var nombre = document.formu.nombre.value;
+   var edad = document.formu.edad.value;
+
+   if (nombre.length > 30)
+   {
+      alert("Tu nombre es demasiado grande. Redúcelo.");
+      return false;
+   }
+   
+   if (edad >= 20 && edad <= 40)
+   {
+      alert("Si tienes entre 20 y 40 años, no puedes usar este programa.");
+      return false;
+   }
+   
+   return true;
+}
+</script>
+
+
+
 
 	<script type="text/javascript">
 Highcharts.chart('container2', {
@@ -153,125 +228,123 @@ Highcharts.chart('container2', {
     series: [{
         name: 'Delivered amount',
         data: [
-            ['Bitcoins', 8],
+            ['Bitcoins', 4],
             ['ETHERUM', 3],
             ['Mixed nuts', 1],
             ['Oranges', 6],
-
+           
         ]
     }]
 });
-
-
-		</script>
+		
+		
+		
+		</script> 
 
 		</section>
 	<br><br>
-
+	
 	<section>
-
-<table class= productos>
-<tr>
-
-    <th>Producto</th>
-
-    <th>Numero de titulos </th>
-
-    <th>Fecha de compra</th>
-
-    <th>Valor Fecha de compra</th>
-
-	<th>Valor actual </th>
-
-
+	
+		
+<table id="customers">
+ 
+ <tr>
+    <th>Moneda</th>
+    <th>Cotizacion</th>
+    <th>Cantidad </th>
+    <th>Variacion </th>
+    <th> Porcentaje de la cartera </th>
   </tr>
-
   <tr>
-
-    <td>BITCOIN</td>
-
-    <td>1</td>
-
-    <td>Parcialmente nublado</td>
-
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
-
   <tr>
-
-    <td>19°C</td>
-
-    <td>17°C</td>
-
-    <td>12°C</td>
-
+    <td>Bitcoin</td>
+    <td>Christina Berglund</td>
+    <td>Sweden</td>
   </tr>
-
   <tr>
-
-    <td>E 13 km/h</td>
-
-    <td>E 11 km/h</td>
-
-    <td>S 16 km/h</td>
-
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
   </tr>
-
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Königlich Essen</td>
+    <td>Philip Cramer</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+  <tr>
+    <td>North/South</td>
+    <td>Simon Crowther</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Paris spécialités</td>
+    <td>Marie Bertrand</td>
+    <td>France</td>
+  </tr>
 </table>
 
-
-
-
-			</section>
-
-
+	
+	
+	
+			</section>	
+	
+			
 		<!-- fi de la secció-->
-
-<aside>
-<div class="blocs-aside">
-
-		<ul class="categoria">
-		<h1>Articles recents</h1>
-			<li><a href = "Asia ja es aqui.html">Asia ja es aqui!!!</a></li>
-			<li><a href = "post2.html"> Tendecies Primavera</a></li>
-			<li><a href = "post3.html"> Fira diseny Barcelona 2018!!</a></li>
-
-			<br>
-			<br>
-			<iframe width="350" height="300" src="https://www.youtube.com/embed/UAuumtEHdtY" frameborder="0" allowfullscreen></iframe>
-			<br>
-			<br>
-			<h2> Segueixnos a les reds socials</h2>
-
-			<div class="xarxess">
-
-			<a title="facebook" width="500" height="250" href="https://www.facebook.com/Sur-Mesure-743898325812747/"><img src="flo.png" alt="Facebook" /></a>
-			<a title="Instagram" href="https://www.instagram.com/tendenciassurmesure/"><img src="lin.png" width="100" height="100" /></a>
+				
+		<!-- barra lateral-->
 
 
-
-		</ul>
-		</div>
-
-			</aside>
-
-
-
-
-		<!-- Fi de l' aside-->
-
+<div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+			
+			
+		
+		<!-- Fi barra lateral --->
+	
 
 		<!-- Inici del peu de pàgina-->
-
-
-
+	
+	
+	
 	<footer>
 
-<p> Sur Mesure   </p>
+<p> Sur Mesure   </p>  
 
-
+  
 	</footer>
-
+	
 	</div>
-
+	
 </body>
 </html>

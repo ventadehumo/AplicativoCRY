@@ -1,398 +1,47 @@
-body ,navegacio{
-
-	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-
-    color:#333
-
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?b7qwnk');
+  src:  url('fonts/icomoon.eot?b7qwnk#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?b7qwnk') format('truetype'),
+    url('fonts/icomoon.woff?b7qwnk') format('woff'),
+    url('fonts/icomoon.svg?b7qwnk#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-footer {
-    height: 65px;
-    width: 2000px;
-    background: #000000;
-    clear: both;
-	color: #FFFFFF;
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-
-
-.post1{
-	float:left;
-	width: 800px;
-	padding: 10px;
-	border: 1px solid #ccc!important;
-    margin-top: 10px;
-	 text-align: justify;
-	 margin-bottom:10px;
-
-
-}
-
-.post2{
-	float:left;
-	width: 800px;
-	padding: 10px;
-	border: 1px solid #ccc!important;
-	margin-top: 10px;
-    text-align: justify;
-	margin-bottom:10px;
-}
-
-.post3{
-	float:left;
-	width: 800px;
-	padding: 10px;
-	border: 1px solid #ccc!important;
-	margin-top: 10px;
-    text-align: justify;
-	margin-bottom:10px;
-
-}
-
-
-
-.xarxess img {
-    margin: 5px;
-    float:left;
-	height: 50px;
-	width: 50 px;
-}
-
-		img{
-	float: left;
-	width: 240px;
-	height:240px;
-	margin-bottom: 10px;
-	margin:10px;
-}
-
-
-
-
-
-	#wrapper {
-    margin: 0 auto;
-    width: 1500px;
-}
-
-#cap  {
-    float: center;
-    height: 140px;
-    width: 2000px;
-    background: #000000;
-}
-
-#navegacio {
-    float: left;
-    height: 90px;
-    width: 2000px;
-    background: #000000;
-	 color:#F0FFFF
-
-}
-
-
-
-
-
-
-
-
-
-}
-.contingut {
-    float: left;
-    background: #FFFFFF;
-    width: auto;
-}
-
-  .boton_personalizado{
-    text-decoration: none;
-    padding: 5px;
-    font-weight: 400;
-    font-size: 15px;
-    color: #ffffff;
-    background-color: #1883ba;
-    border-radius: 10px;
-    border: 2px solid #0016b0;
-	margin: 50px
-  }
-  .boton_personalizado:hover{
-    color: #1883ba;
-    background-color: #ffffff;
-  }
-header {
-	width:100%;
-}
-
-nav {
-	width:90%;
-	max-width:2000px;
-	margin:20px auto;
-	background:#024959;
-}
-
-.menu_bar {
-	display:none;
-}
-}
-
-
- .icon-cart:before {
+.icon-cart:before {
   content: "\e93a";
 }
 .icon-phone:before {
   content: "\e942";
 }
- .icon-menu:before {
+.icon-menu:before {
   content: "\e9bd";
 }
 .icon-info:before {
   content: "\ea0c";
 }
 
-nav ul {
-	overflow:hidden;
-	list-style:none;
+
+div.container1graficoindividual
+
+{
+	FLoat:left;
+	
+	
 }
-
- nav ul li {
-	float:left;
-}
-
-nav ul li a {
-	color:#fff;
-	padding:20px;
-	display:block;
-	text-decoration:none;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 17px;
-
-}
-
- nav ul li span {
-	margin-right:10px;
-}
-
- nav ul li a:hover {
-	background:#fefdfd38
-}
-
-section {
-	padding:20px;
-}
-
-
-
-   aside h3 {
-  /* -- Codi suprimit -- */
-    color: #000000;
-    font-size: 17px;
-    font-weight: bold;
-    margin: -15px 0 15px 0;
-    padding: 10px;
-    text-align: center;
-}
-aside div.blocs-aside {
-  text-decoration: none;
-    font-size: 16px;
-    color: #666;
-	overflow: hidden;
-}
-
-aside ul {
-    overflow: hidden;
-}
-aside ul.categoria li a {
-    text-decoration: none;
-    font-size: 16px;
-    color: #666;
-}
-aside ul.categoria li a:hover {
-    color: #099;
-}
-
-aside ul.categoria li {
-    margin: 10px 30px;
-    padding: 0 10px 5px 0;
-    border-bottom: 1px dotted #555;
-}
-
-
-aside div.blocs-aside p.info {
-    margin: 30px;
-}
-div.blocs-aside p.info img {
-    width: 100px;
-    height: 100px;
-    float: left;
-    margin: 5px 10px;
-}
-
-
-.xarxess img {
-    margin: 5px;
-    float:left;
-	height: 100px;
-	width: 100px;
-}
-
-aside.blocs-aside {
-    float: right;
-    margin: 0 10px 0 0;
-    width: 200px;
-	overflow: hidden;
-}
-
-
-
-
-@media only screen and (max-width: 481px) {
-
-#wrapper {
-    margin: 0 auto;
-    width: 92%;
-	padding 5px ;
-}
-
-
-#cap {
-
-    height: 100px;
-    width: 100%;
-    background: #000000;
-}
-
-#navegacio {
-    float: left;
-    height: 90%;
-    width: 100%;
-    background: #000000;;
-
-}
-
-.contingut {
-    float: left;
-    background: #FFFFFF;
-    width: 90%;
-}
-.post1{
-  float:left;
-  width: 95%;
-  padding: 10px;
-  border: 1px solid #ccc!important;
-   text-align: justify;
-    margin-bottom:10px;
-
-
-
-}
-
-.post2{
-  float:left;
-  width: 95%;
-  padding: 10px;
-  border: 1px solid #ccc!important;
-   text-align: justify;
-    margin-bottom:10px;
-}
-	.post3{
-  float:left;
-  width: 95%;
-  padding: 10px;
-  border: 1px solid #ccc!important;
-   text-align: justify;
-    margin-bottom:10px;
-}
-
-
-
-
-footer {
-
-    height: 80px;
-    width: auto;
-    background: #000000;
-    clear: both;
-	color: #FFFFFF;
-	font-size:15px;
-
-
-}
- #menu-bar ul a {
-  padding:10px 0px 10px 15px;
-  color:#424242 !important;
-  font-size:7px;
-  font-style:normal;
-  font-family:arial;
-  font-weight: normal;
-  text-shadow: 2px 2px 3px #FFFFFF;
-}
-
-
- img {
-
-    width: 90%;
-    height: 90%;
-    margin-bottom: 10px;
-    margin: 10px;
-
-}
-
-
-p{
-   font-size:12px;
-
-}
-
-
-
-
- aside h3 {
-  display:none;
-}
-aside div.blocs-aside {
-  display:none;
-}
-
-aside ul {
-   display:none;
-}
-aside ul.categoria li a {
-     display:none;
-}
-aside ul.categoria li a:hover {
-     display:none;
-}
-
-aside ul.categoria li {
-     display:none;
-}
-
-
-aside div.blocs-aside p.info {
-     display:none;
-}
-div.blocs-aside p.info img {
-     display:none;
-}
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
-

@@ -11,9 +11,11 @@ from.models import Criptomoneda
 def index(request):
     return render_to_response('index.html')
 
-
 def style(request):
     return render_to_response('style.css')
+
+def elMeuEstil(request):
+    return render_to_response('elMeuEstil.css')
 
 def criptomoney(request):
     return render_to_response('criptomoney.html')

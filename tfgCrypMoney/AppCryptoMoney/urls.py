@@ -7,6 +7,6 @@ urlpatterns = [
     url(r'^style', style, name='style'),
     url(r'^elMeuEstil', style, name='elMeuEstil'),
 
-    url(r'^crawler$', criptomoney, name='criptomoney'),
+    url(r'^criptomoney', criptomoney, name='criptomoney'),
     url(r'^crawler/updateDB', updateDB, name='updateDB'),
 ]

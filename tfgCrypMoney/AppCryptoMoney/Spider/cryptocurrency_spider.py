@@ -45,7 +45,6 @@ class CRYPTOCURRENCY_Spider(enginemodule.Engine_Module):
         self.url = 'https://api.coinmarketcap.com/v1/ticker/'
         self.headers = {
          'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1'}
-        #self.formdata={'login': '', 'password': ''}
         self.meta = None
         #self.meta = {'proxy': 'http://127.0.0.1:8081'}
 
@@ -89,7 +88,8 @@ class CRYPTOCURRENCY_Spider(enginemodule.Engine_Module):
             # Fecha de scrapero
 
             # Extraccion depsicion global de monedas
-            cripto_List = json.loads(response.body)
+            cripto_List = json.loads(response.body_as_unicode())
+            self.logger.debug("--- * Money * ---")
 
             self.logger.debug("End globalposition")
 
@@ -116,19 +116,28 @@ class CRYPTOCURRENCY_Spider(enginemodule.Engine_Module):
     def spider_closed(self):
         try:
             self.logger.debug("Init spider_closed")
-            #self.logger.debug("Writing Criptomoney ... ")
 
-            '''
-            # Escrivimos las noticias a XML
-            if self.WriteXML_Controller:
-                self.WriteNewsToXML(self.News)
-                self.WriteXML_Controller = False
-            '''
         except Exception, e:
             self.logger.error("Error in spider_closed")
             self.logger.error(e)
 
 def init_twisted_CryptoSpider():
+    global cripto_List
+    cripto_List = []
+
+    configure_logging()
+    runner = CrawlerRunner()
+
+    @defer.inlineCallbacks
+    def crawl():
+        yield runner.crawl(CRYPTOCURRENCY_Spider)
+        reactor.stop()
+
+    crawl()
+    reactor.run()
+    return cripto_List
+
+def loop_twisted_CryptoSpider():
     global cripto_List
     cripto_List = []
 

@@ -19,11 +19,12 @@ class Motor_Extracion_Injection:
     #----------------- Menu options ------------
     def view_collection(self):
         print "[*] Motor view collection"
-        self.mongo.view_data_incollection('Money_Collection')
+        collection = self.mongo.view_data_incollection('Money_Collection')
+        return collection
 
     def view_MongoData(self):
         print "[*] Mottor view data"
-        self.mongo.view_all_collections()
+        self.mongo.view_collections()
         #mongo.view_data_incollection('censys')
 
     def Spider(self):
@@ -67,6 +68,7 @@ class Motor_Extracion_Injection:
                 print "[*] Stopping Information gathering"
                 sys.exit()
 
+'''
 def init_Motor():
     print "[*] Motor Gaaaaas !!!"
     motor = Motor_Extracion_Injection()
@@ -74,3 +76,4 @@ def init_Motor():
 
 if __name__ == "__main__":
     init_Motor()
+'''

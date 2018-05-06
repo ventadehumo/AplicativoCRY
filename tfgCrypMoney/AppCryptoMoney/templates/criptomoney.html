@@ -2,16 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <BASE href="http://127.0.0.1:8080/crawler/criptomney.html">
+    <BASE href="http://127.0.0.1:8080/criptomney.html">
     <title>CriptoMoney</title>
 </head>
 <body>
-<div id="Criptomoney" class="tabcontent">
-  <h3>Cryptomoney Database Update</h3>
+<div id="Info" class="tabcontent">
+  <h3>Cryptomoney - Estado del Mercado</h3>
   <p>This module allows you to init de crawler process to update de DB with the actual Money state</p>
-     <form action="../crawler/updateDB">
-        <input type="submit" value="Update DB" />
-    </form>
+</div>
+<div id="Mercado" class="tabcontent">
+    <table class="MercadoTable">
+      <tr>
+          <th>Symbol</th>
+          <th>Name</th>
+          <th>Price Usd</th>
+          <th>24h Volume Usd</th>
+          <th>Price BTC</th>
+          <th>Ranking</th>
+          <th>Percent Change 1h</th>
+          <th>Max Supply</th>
+      </tr>
+
+        {% for coin in collection %}
+        <tr>
+            <td>{{ coin.symbol }}</td>
+            <td>{{ coin.name }}</td>
+            <td>{{ coin.price_usd }}</td>
+            <td>{{ coin.24h_volume_usd }}</td>
+            <td>{{ coin.price_btc }}</td>
+            <td>{{ coin.rank }}</td>
+            <td>{{ coin.percent_change_1h }}</td>
+            <td>{{ coin.max_supply }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </div>
 </body>
 </html>

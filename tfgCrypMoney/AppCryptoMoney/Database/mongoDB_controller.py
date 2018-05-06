@@ -20,21 +20,21 @@ class database_Mongo:
     def view_all_collections(self):
         print "[*] View collection of " + str(self.db.name)
         collection = self.db.collection_names()
-        print collection
+        return collection
 
     def insert_data(self, collection_name, data):
         print "[*] Insert data to new colection"
-        #new_collection = self.db[collection]
-        #result = posts.insert_one(data)
         print data
         Money_Collection = self.db.collection_name
         self.db.Money_Collection.insert(data)
-        #print('[*] One post: {0}'.format(collection.inserted_id))
         print "[*] Data is in MongoDB"
 
     def view_data_incollection(self, collection):
         print "[*] View data of " + collection
         posts = self.db[collection]
         scotts_posts = posts.find()
-        for post in scotts_posts:
-            print(post)
+        collectionList = []
+        for coin in scotts_posts:
+            print(coin)
+            collectionList.append(coin)
+        return collectionList

@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.shortcuts import render_to_response
 from Spider import cryptocurrency_spider
 from.models import Criptomoneda
+from injector_data import Motor_Extracion_Injection
 
 # Create your views here.
 
@@ -18,7 +19,10 @@ def elMeuEstil(request):
     return render_to_response('elMeuEstil.css')
 
 def criptomoney(request):
-    return render_to_response('criptomoney.html')
+    Motor = Motor_Extracion_Injection()
+    collection = Motor.view_collection()
+    context = {'collection': collection}
+    return render(request, 'criptomoney.html', context)
 
 def updateDB(request):
     print "[*] Starting spider from Web Request"
